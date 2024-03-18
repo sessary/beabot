@@ -31,3 +31,5 @@ entrypoint.sh
 .dockerignore
 # Fly.io files
 fly.toml
+
+*elixir_buildpack.config*

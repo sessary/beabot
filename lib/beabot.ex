@@ -48,7 +48,7 @@ defmodule BeabotConsumer do
         Api.create_message(msg.channel_id, message)
 
       _ ->
-        IO.puts("I don't know what this is" <> msg.content <> "\n")
+        IO.puts("I don't know what this is: " <> msg.content <> "\n")
         :ignore
     end
   end
