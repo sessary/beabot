@@ -35,15 +35,16 @@ defmodule BeabotConsumer do
         Api.create_message(msg.channel_id, be_a(opts))
 
       "!help" ->
-        message =
-          "BeaBot creates an acting prompt for you to practice drills. The default configuration " <>
-            "will create a character, followed by random chances to add an emotion, a control space, " <>
-            "a center of gravity (for movement) and an action. Others may be added later.\n" <>
-            "To have BeaBot create a prompt, simply type !bea in the chat. You may also have a private " <>
-            "DM session using the same command." <>
-            "BeaBot is heavily inspired by a small subset of exercises and drills performed at " <>
-            "The Acting Center is Sherman Oaks, CA. Please check them out at http://www.theactingcenterla.com " <>
-            "for more information!"
+        message = """
+        BeaBot creates an acting prompt for you to practice drills. The default configuration
+        will create a character, followed by random chances to add an emotion, a control space,
+        a center of gravity (for movement) and an action. Others may be added later.\n
+        To have BeaBot create a prompt, simply type !bea in the chat. You may also have a private
+        DM session using the same command.
+        BeaBot is heavily inspired by a small subset of exercises and drills performed at
+        The Acting Center is Sherman Oaks, CA. Please check them out at http://www.theactingcenterla.com
+        for more information!
+        """
 
         Api.create_message(msg.channel_id, message)
 
