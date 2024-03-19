@@ -58,7 +58,7 @@ defmodule BeabotConsumer do
   # that will eventually be validated and used. The current idea will be <keyword> <switch>.
   # For example: !bea emotion 10 would send 10 to emotion, which will be used in the chance the prompt will
   # use it.
-  defp be_a(_opts \\ []) do
+  defp be_a(_opts) do
     # TODO: split opts
     # still thinking about opts. I think it should look like ["character", <int>, "emotion", <int>, ...]
     # we'll have some overriding commands like !bea2 that will pass in different sets of default values to make
@@ -87,11 +87,11 @@ defmodule BeabotConsumer do
     end
   end
 
-  defp parse_options(options) do
-    # handle the empty list (no options passed)
-    # question: Should I build a hashmap? %{action: 7, cog: 8...}
-    case options do
-      [] -> %{}
-    end
-  end
+  # defp parse_options(options) do
+  # handle the empty list (no options passed)
+  # question: Should I build a hashmap? %{action: 7, cog: 8...}
+  #  case options do
+  #    [] -> %{}
+  #  end
+  # end
 end
