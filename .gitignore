@@ -26,10 +26,10 @@ beabot-*.tar
 /tmp/
 
 # Dockerfile
-Dockerfile
+# Dockerfile
 entrypoint.sh
 .dockerignore
 # Fly.io files
-fly.toml
+# fly.toml
 
 *elixir_buildpack.config*
