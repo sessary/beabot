@@ -25,7 +25,7 @@ beabot-*.tar
 # Temporary files, for example, from tests.
 /tmp/
 
-# Dockerfile
+
 # Dockerfile
 entrypoint.sh
 .dockerignore

@@ -1,4 +1,7 @@
-FROM elixir:1.16.2 as build
+#FROM elixir:1.16.2 as build
+#FROM elixir:alpine as build
+FROM hexpm/elixir:1.16.2-erlang-26.2.3-alpine-3.19.1 as build
+
 
 RUN mkdir /app
 WORKDIR /app
@@ -23,7 +26,7 @@ RUN mix compile
 RUN mix release
 
 # prepare release image
-FROM alpine:3.16.0 AS app
+FROM alpine:3.19.1 AS app
 
 # install runtime dependencies
 RUN apk add --update bash libstdc++ libgcc
@@ -42,4 +45,5 @@ USER nobody
 
 ENV HOME=/app
 CMD ["bash", "/app/entrypoint.sh"]
-#CMD ["bash", "/app/bin/beabot start"]
+#CMD ["bash", "$HOME/bin/beabot start"]
+#CMD ["bash", "./_build/dev/rel/beatbot/bin/beabot start"]
